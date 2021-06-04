@@ -1,0 +1,73 @@
+<!--<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Page</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div align="center">
+		<h1>Logged In Successfully</h1>
+		<h2>Welcome</h2>
+		<table border="6" class="table table-striped table-responsive-md">
+			<thead>
+				<tr>
+					<th>Item_Name</th>
+					<th>Price</th>
+					<th>Quantity</th>
+				</tr>
+				<tr th:each="shop : ${listStocks}">
+					<td th:text="${shop.Item_Name}"></td>
+					<td th:text="${shop.Price}"></td>
+					<td th:text="${shop.Quantity}"></td>
+				</tr>
+			</thead>
+		</table>
+	</div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Shopping Details</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+</head>
+<body>
+	<style>
+body {
+	background-image:
+		url('https://image.freepik.com/free-photo/shopping-cart-with-bags-mint-green-wall-background_1421-4263.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+</style>
+	<h1>Product List</h1>
+	<div class="container my-2">
+	
+		<table border="1" class="table table-striped table-responsive-md">
+			<thead>
+				<tr>
+					<th>Item_Name</th>
+					<th>Price</th>
+					<th>Quantity</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="shop : ${listStocks}">
+					<td th:text="${shop.Item_Name}"></td>
+					<td th:text="${shop.Price}"></td>
+					<td th:text="${shop.Quantity}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
